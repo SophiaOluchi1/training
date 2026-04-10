@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article
+      data-post-id="12345"
+      data-author="john Doe"
+      data-category="technology"
+      data-published="2024-11-22"
+    >
+      <h2>Article title</h2>
+      <p>content.....</p>
+    </article>
+
+    <button
+      data-action="delete"
+      data-item-id="4567"
+      data-confirm-message="Are you sure?"
+    >
+      Delete item
+    </button>
+    <dialog id="my Dialog">
+      <h2>Dialog Title</h2>
+      <p>This is a model dialog</p>
+      <button onclick="document.GetElementById('myDialog').close()">
+        close
+      </button>
+    </dialog>
+    <button onclick="document.getElementById('myDialog').showModal()">
+      open dialog
+    </button>
+    <details>
+      <summary>click to expand</summary>
+      <p>this content is hidden</p>
+      <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+      </ul>
+    </details>
+<br>
+    <label for="file-progree">Upload Progress:</label>
+    <progress id="file-progress" value="70" max="100">70%
+         </progress>
+<br>
+         <label for="disk-usage">disk-usage</label>
+    <meter id="disk-usage" value="0.6" min="0" max="1">60%</meter>
+
+    <meter 
+    value="45"
+     min="0" 
+     max="100" 
+     low="25" 
+     high="75"
+      optimum="100">
+        75%
+    </meter>
+
+    <template id="card-template">
+        <div id="card">
+            <h3>Title</h3>
+            <p>something else</p>
+
+        </div>
+    </template>
+
+    <picture >
+        <source media="(min-width: 400px)" srcset="images/coffee_2">
+        <source media="(min-width:800px)" srcsets="images/coffee_3">
+        <img src="images/coffee_2" alt="">
+    </picture>
+    <div contenteditable>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse sapiente nesciunt excepturi fugiat, autem dicta nostrum cum. Voluptatum, expedita iste? Tenetur saepe aut mollitia ea eius ducimus, est officia voluptas!
+    </div>
+  </body>
+</html>

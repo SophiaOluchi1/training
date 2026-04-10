@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+
+<body>
+    <!-- skip to main content link for accessibility-->
+    <a href="#main-content">Skip to main content</a>
+
+    <!--Header with navigation-->
+    <header>
+        <nav aria-label="main navigation">
+            <strong>CloudTask</strong>
+
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">pricing</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!--Main Content-->
+    <main id="main-content">
+        <!--Hero Section-->
+        <section id="home">
+            <h1>Project Management Made Simple</h1>
+            <p><strong>Organize your work, collaborate with your team and achieve more together</strong></p>
+            <p><a href="#contact">Get started Free</a></p>
+        </section>
+        <hr>
+        <!--Features Section-->
+        <section id="features">
+            <h2>Why Choose Cloudtask</h2>
+            <article>
+                <h4>Fast & Intuitive</h4>
+                <p>Get started in minutes with our clean, intuitive interface. No training required.</p>
+            </article>
+
+            <article>
+                <h4>Team Collaboration</h4>
+                <p>Work together seamlessly with real time update and built-in communication tools.</p>
+            </article>
+
+            <article>
+                <h4>Visual Progress</h4>
+                <p>Track project progress with beautiful dashboards and customizable reports.</p>
+            </article>
+
+            <article>
+                <h4>Secure and Reliable</h4>
+                <p>Enterprise-grade security keeps your data safe with automatic backups.</p>
+            </article>
+
+            <article>
+                <h4>Mobile Ready</h4>
+                <p>Access your projects anywhere with our responsive design and mobile apps.</p>
+            </article>
+
+            <article>
+                <h4>Integrations</h4>
+                <p>Connect with your tools like slack,Google Drive and Github.</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Pricing Section-->
+        <section id="pricing">
+            <h2>Sample pricing</h2>
+
+            <table border="1">
+                <caption>Choose the plan that works for you</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Plan</th>
+                        <th scope="col">Users</th>
+                        <th scope="col">Storage</th>
+                        <th scope="col">price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td scope="row">Free</td>
+                        <td>UP to 5</td>
+                        <td>1GB</td>
+                        <td><strong>$0/month</strong></td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">Pro</td>
+                        <td>Up to 25</td>
+                        <td>1GB</td>
+                        <td><strong>$29/month</strong></td>
+
+                    </tr>
+                    <tr>
+                        <td scope="row">Enterprise</td>
+                        <td>Ulimited</td>
+                        <td>Unlimited</td>
+                        <td><strong>Custom</strong></td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+
+        </section>
+
+        <hr>
+
+        <!--Testimonial Section-->
+        <section id="Testimonials">
+            <h2>What Our Users Say</h2>
+
+            <p>"CloudTask has transformed how our team works together. We're more organized and productive than ever!"
+            </p>
+
+            <h4>___Sarah Johnson, Marketing Director</h4>
+            <p>"Simple, powerful and exactly what we needed. The best project management tool we've used."</p>
+
+            <h4>___Michael Chen, Startup Founder</h4>
+            <p>"The mobile app is fantatstic."</p>
+
+            <h4>___Emily Rodriguez, Remote Team Lead</h4>
+
+        </section>
+
+        <hr>
+        <!--FAQ Section-->
+        <section id="faq">
+            <h2>Frequently asked questions</h2>
+
+            <article>
+                <h3>Is CloudTask free to try?</h3>
+                <p>Yes! Our free plan includes uo to 5 users and 1GB of storage. No credit card required.</p>
+
+                <h3>Can I upgrade or downgrade my plan?</h3>
+                <p>Absolutely! You can change your plan at any time from your account setings.</p>
+
+                <h3>Is my data secure?</h3>
+                <p>Yes. We use enterprise-grade encryption and perform automatic daily backups of all your data.</p>
+
+                <h3>Do you offer customer support?</h3>
+                <p>Yes! Free plans get email support, while pro and enterprise plans incude pirority support and phone
+                    access.</p>
+            </article>
+
+        </section>
+
+        <hr>
+        <!--Contact Form-->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Have questions? we'd love to hear from you!</p>
+            <form action="/submit-form" method="POST">
+                <p>
+                    <label for="name">Full Name: <abbr title="required">*</abbr></label>
+                    <br>
+                    <input type="text" id="name" name="name" required placeholder="Sophie Oluchi">
+                </p>
+                <p>
+                    <label for="email">Email Address: <abbr title="required">*</abbr></label>
+                    <br>
+                    <input type="text" id="email" name="email" required placeholder="sophie@.com">
+                </p>
+
+
+                <p>
+                    <label for="company">Company: <abbr title="required">*</abbr></label>
+                    <br>
+                    <input type="text" id="Company" required placeholder="Your company name">
+                </p>
+                <p>
+                    <label for="team-size">Team Size: <abbr title="required">*</abbr></label>
+                    <br>
+                    <select name="team-size" id="team-size" required>
+                        <option value="">-- Select team size--</option>
+                        <option value="1-5">1-5 people</option>
+                        <option value="6-20">6-20 people</option>
+                        <option value="21-50">21-50 people</option>
+                        <option value="51+">51+ people</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="message">message: <abbr title="required">*</abbr></label>
+                    <br>
+                    <textarea name="message" id="message" rows="5" cols="50" required
+                        placeholder="Tell us about your project needs...."></textarea>
+                </p>
+
+
+                <p>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter for updates and tips</label>
+                </p>
+                <p>
+                    <button type="submit"> Send Message </button>
+                    <button type="reset">clear form</button>
+                </p>
+            </form>
+
+            </selection>
+
+            </p>
+
+
+        </section>
+        <hr>
+
+        <!--Company Info Section-->
+        <section id="about">
+            <h2>About CloudTask</h2>
+            <p>CloudTask was founded in the year 2020 with a simple mission: make project management accessible to teams
+                of all sizses. Today, over 10,000 teams world wide use CloudTask to stay organized and productive.</p>
+
+            <h4>Our Values</h4>
+            <ul>
+                <li><strong>Simplicity:</strong>Powerful features shouldn't be complicated.</li>
+                <li><strong>Collaboration:</strong>Great work happens when team works together.</li>
+                <li><strong>Reliability:</strong>Your data is always safe and accessible</li>
+                <li><strong>Innovation:</strong>we're constantly improving based on user feedback</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <nav aria-lable="footer navigation">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="Faq">FAQ</a></li>
+            </ul>
+
+        </nav>
+
+        <nav aria-label="Legal">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="//privacy">Privacy</a></li>
+                <li><a href="/terms">Terms of service</a></li>
+                <li><a href="/cookie">Cookie Policy</a></li>
+
+            </ul>
+
+        </nav>
+
+        <section>
+            <h3>Connect With Us</h3>
+            <ul>
+                <li><a href="https://twitter.com/cloudtask" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://linkedin.com/company/cloudtask" target="_blank"
+                        rel="noopener noreferrer">Linkedin</a></li>
+                <li><a href="https://github.com/cloudtask" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="mailto:support@cloudtask.com">Email Us</a></li>
+            </ul>
+        </section>
+
+        <hr>
+        <p><small>&copy; 2024 cloudtask. All rights reserved.</small></p>
+
+        <p>
+            <small>
+                made with love by Sophie
+                <a href="#main-content">Back to Top</a>
+            </small>
+        </p>
+
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms and inputs</title>
+  </head>
+  <body>
+    <form action="/submit" method="GET">
+      <label for="username">username</label>
+      <input type="text" id="username" name="usename" required />
+      <button type="Reset">Reset</button>
+      <button type="submit">submit</button>
+      <button type="button">button</button>
+    </form>
+
+    <hr />
+    <form action="" method="Post" enctype="multipart/form-data">
+
+    <!--input Types -->
+    
+    <h2>Basic Inputs</h2>
+
+
+
+    <!--Text Input-->
+
+    <label for="name">name:</label>
+    <input type="text" id="name" name="name" placeholder=" Enter Your Name" />
+
+    <button>submit</button>
+
+    <br>
+
+    <!--Email Input-->
+
+    <label for="email">email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder=" Enter Your email" required>
+      <button>submit</button>
+
+      <br>
+
+      <!--password input-->
+      <label for="password">password:</label>
+      <input type="password"
+      id="password"
+      name="password"
+      minlength="8"
+      />
+
+      <button>submit</button>
+      <br>
+
+       <!--Telephone input-->
+      <label for="phone">phone:</label>
+      <input 
+      type="tel"
+      id="phone"
+      name="phone"
+      pattern="[0-9-{3}-[0-9]-{3}-[0-9-{4}"
+      />
+
+      <button>submit</button> 
+      <br>
+      
+      <!--URL input-->
+      <label for="webwite">website:</label>
+      <input 
+      type="url"
+      id="webwite"
+      name="webwite"
+      />
+
+      <button>submit</button>
+      <br>
+
+       <!--search input-->
+      <label for="search">search:</label>
+      <input 
+      type="search"
+      id="search"
+      name="search"
+      />
+
+      <button>submit</button>
+
+    <br>
+    
+    <!--Textarea for longer Text-->
+      <label for="message">message:</label>
+      <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+      <br>
+      <button>submit</button>
+      <br>
+
+      <!--Number input-->
+      <label for="Age">Age:</label>
+      <input 
+      type="number"
+      id="Age"
+      name="Age"
+      min="18"
+      max="100"
+      />
+
+     <button>submit</button>
+     <br> 
+     
+     <!--range slider-->
+      <label for="volume">volume:</label>
+      <input 
+      type="range"
+      id="volume"
+      name="volume"
+      min="0"
+      max="100"
+      value="50"
+      />
+      <br>
+
+    
+
+      <!--date picker-->
+      <label for="bithday">bithday:</label>
+      <input 
+      type="date"
+      id="bithday"
+      name="bithday"/>
+
+      <br>
+
+      <!--time picker-->
+      <label for="appiontment">Appiontment:</label>
+      <input 
+      type="Time"
+      id="Appiontment"
+      name="Appiontment"
+      />
+      <br>
+      
+      <!--color picker-->
+      <label for="color">favourite color:</label>
+      <input 
+      type="color"
+      id="color"
+      name="color" />
+      <br>
+
+      <h2>Selection Inputs</h2>
+      <fieldset>
+        <legend>Gender:</legend>
+        <input type="radio"
+        id="Male"
+        name="gender"
+        value="Male">
+        <label for="Male">Male:</label> 
+
+        <input type="radio"
+        id="Female"
+        name="gender"
+        value="Female">
+        <label for="Female">Female:</label>
+
+
+         <input type="radio"
+        id="Other"
+        name="gender"
+        value="Other">
+        <label for="Other">Other:</label>
+
+
+      </fieldset>
+      <br>
+
+      <fieldset>
+        <legend>Intrests:</legend>
+        
+        <input  type="checkbox"
+         id="Coding"
+        name="intrests"
+         value="coding">
+        <label for="Coding">Coding</label> 
+        
+        
+        
+        
+        <input  type="checkbox"
+         id="Design"
+        name="intrests"
+         value="Design">
+        <label for="Design">Design</label>
+        </fieldset>
+
+        <label for="Country">Country:</label>
+        <select name="Country" id="Country">
+            <option value="">
+                --Select a Country--
+            </option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option> 
+            <option value="Ca">Canada</option>
+
+
+        </select>
+        <br>
+
+        <label for="Skills">Skills: (hold ctrl to select multiple)</label>
+        <br>
+        <select name="skills" id="skills"multiple>
+             <option value="html">HTML</option> 
+             <option value="css">CSS</option> 
+             <option value="js">javaScript</option>
+
+        </select>
+          <br>
+
+          <label for="resume">Upload your Resume:</label>
+
+          <input type="file"  id="resume" name="resume" accept=".pdf,.doc,.docx">
+          <br>
+ <button>submit</button>
+      
+   </form>
+  </body>
+</html>

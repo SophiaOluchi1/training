@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential ARIA Attributes</title>
+</head>
+<body>
+    <h1>essential aria attributes for beginners</h1>
+
+    <!-- ========= 1. LABELING =========-->
+     <section>
+        <h2>1. labeling Elements</h2>
+
+        <!--aria-label: provides a label when no visible label exits-->
+        <button aria-label="close dialog"></button> </button>
+        <input type="search" aria-label="search producys">
+
+        <!--aria-labelledby: uses another element's text as the label-->
+        <h2 id="dialog-title">delete item</h2>
+        <div role="dialog" aria-labelledby="dialog-title">
+            <p>Are you sure?</p>
+
+        </div>
+
+        <!--aria-describedby: connects help text to an input -->
+        <label for="password">password:</label>
+        <input type="password"
+        id="password" aria-describedby="pwd-help">
+        <small id="pwd-help">must be at least 8 characters</small>
+     </section>
+
+     <hr>
+
+     <!--========== 2. HIDING CONTENT =========-->
+     <section>
+        <h2>2. hiding decorative content</h2>
+
+        <!-- aria-hdden: hides decorative elements from screen readers-->
+         <button>
+            <span aria-hidden="true"></span>
+            close
+         </button>
+
+         <!-- aria-hidden on icons thar add no information-->
+          <h3>
+            <span aria-hidden="true"></span>
+            premium feature
+          </h3>
+     </section>
+
+     <hr>
+     <!--========== 3. EXPANDABLE CONTENT ==========-->
+     <section>
+        <h2>3. expandable/collapsible content</h2>
+
+        <!-- aria-expanded: shows if content is expanded or collapsed-->
+         <button aria-expanded="false" aria-controls="menu">
+            menu
+         </button>
+         <div id="menu" hidden>
+            <ul>
+                <li><a href="#home"></a></li>
+                <li><a href="#about"></a></li>
+            </ul>
+             </div>
+
+             <!--Accordion example-->
+             <button aria-expanded="true" aria-controls="faq1">
+                what is html
+            </button>
+            <div id="faq1">
+                <p>html stands for hypertext mark up language</p>
+             </div>
+     </section>
+     <hr>
+     <!--========== 4. CURRENT STATE-->
+     <section>
+        <h2>4. indicating current page/item</h2>
+        <!-- aria-current: marks the current page in navigation-->
+      <nav aria-label="main navigation">
+        <a href="/" aria-current="page">home</a>
+        <a href="/about">about</a>
+        <a href="/contact">contact</a>
+    </nav>
+</section>
+<hr>
+
+   <!--==========5.FORM VALIDATION-->
+   <section>
+<h2>5. form validation</h2>
+
+<!-- aria-invalid: marks form fields with errors-->
+ <label for="email">email:</label>
+ <input type="email" id="email" aria-invalid="true" aria-describedby="email-error">
+ <span id="email-error" role="alert">please enter a valid email</span>
+
+ <!--aria-required: marks required fields-->
+ <label for="username">username:</label>
+ <input type="text" id="username" aria-required="true">
+       </section>
+
+       <hr>
+
+       <!--========== 6. LIVE UPDATES ==========-->
+       <section>
+        <h2>6. Announcing Dynamic Changes</h2>
+
+        <!--role="alert": for urgent messages (announced immediately)-->
+        <div role="alert">
+            Error: connection lost!</div>
+
+            <!-- role="status" for non-urgent updates (announced politely)-->
+             <div role="status">
+                 saving your changes...
+             </div>
+
+             <!--aria-live="polite": Announces changes when user is idle-->
+             <div aria-live="polite">
+                items in cart: 3
+             </div>
+       </section>
+       <hr>
+       <!-- ==========7. MODAL DIALOGS ==========-->
+        <section>
+            <h2>7. modal dialogs</h2>
+
+            <!-- aria-modal: indicates this is a modal that traps focus-->
+             <div role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+                <h2 id="confirm-tittle">confirm action</h2>
+                <p>do you want to proceed?</p>
+                <button>yes</button>
+                <button>No</button>
+             </div>
+        </section>
+        <hr>
+
+        <!-- ==========8. COMPLETE FORM EXAMPLE ==========-->
+         <section>
+            <h2>8. complete accessible form</h2>
+
+            <form>
+                <!--basic input with help text-->
+                <label for="name">full name:</label>
+                <input type="text" id="name" aria-required="true" aria-describedby="name-help">
+                <small id="name-help">enter first and last name</small>
+
+                <!--input with error -->
+                <label for="user-email">email:</label>
+                <input type="email" id="user-email" aria-invalid="true" aria-describedby="email-err">
+                <span id="email-err" role="alert">invalid email format</span>
+
+                <!--submit button-->
+                <button type="submit">submit</button>
+            </form>
+         </section>
+         <hr>
+
+         <!-- ==========9. ACCESSIBLE NAVIGATION ========== -->
+          <section>
+            <h2>9. Navigation with current page</h2>
+            <!-- main navigation with aria-current-->
+             <nav aria-label="primary">
+                <ul>
+                    <li><a href="/" aria-current="page">home</a></li>
+                    <li><a href="/products">products</a></li>
+                    <li><a href="/about">about</a></li>
+                </ul>
+                 </nav>
+          </section>
+          <hr>
+          <!--========= 10. TABLE ACCESSIBILITY ==========-->
+          <section>
+            <h2>10. Accessible Tables</h2>
+
+            <!-- scope attribute tells screen readers if header is a column or row-->
+             <table border="1">
+                <caption>monthly sales</caption>
+                <thead>
+                    <tr>
+                      <th scope="col"> revenue</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">january </th>
+                        <td>$50,000</td>
+                    </tr>
+                    <tr>
+                     <th scope="row">february</th> 
+                     <td>$60,000</td>  
+                    </tr>
+                </tbody>
+             </table>
+          </section>
+
+          <hr>
+
+          <footer>
+            <h2>key takeaways</h2>
+            <ul>
+                <li> <strong>aria-label</strong> - label elements without visible text</li>
+                <li><strong>aria-labelledby</strong>-use existing text as label</li>
+                <li><strong>aria-describedby</strong>-connect help text to inputs</li>
+                <li><strong>aria-hidden</strong>-hide decorative content from screen readers</li>
+                <li><strong>aria-expanded</strong>-show expanded/collapsed state</li>
+                <li><strong>aria-current</strong>-mark current page/item</li>
+                <li><strong>aria-invalid</strong>-mark form errors</li>
+                <li><strong>role="alert"</strong>-urgent announcement</li>
+                <li><strong>role="status"</strong>-Non-urgent updates</li>
+                <li><strong>scope</strong>-define table header relationships</li>
+            </ul>
+            <p><strong>golden rule:</strong>use semantic html first, add ARIA only when needed!</p>
+          </footer>
+
+      
+    
+</body>
+</html>
